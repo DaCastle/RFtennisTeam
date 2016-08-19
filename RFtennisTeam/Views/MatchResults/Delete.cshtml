@@ -1,0 +1,67 @@
+﻿@model RFtennisTeam.Models.MatchResults
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div id="Dak-Standard">
+    <h2 id="Footer">Delete</h2>
+
+    <h3 id="Footer">Are you sure you want to delete this?</h3>
+    <div>
+        <h4 id="Footer">Match Results</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.player1)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.player1)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.player2)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.player2)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.date)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.date)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.setScores)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.setScores)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.addedBy)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.addedBy)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</div>

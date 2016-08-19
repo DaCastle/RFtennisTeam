@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "dakOnly";
+}
+
+<div style="background-image: url(../../Tennis-Ball-Sports-Wallpaper.jpg) !important;">
+    <div>
+        <h1 style="text-align:right; color:red;font-size: 5em;font-family:Impact;text-decoration:underline">River Falls Tennis Club</h1>
+
+        @if (User.Identity.Name != "")
+        {
+            if (User.Identity.Name.IndexOf(".") < User.Identity.Name.IndexOf("@"))
+            {
+                var name = User.Identity.Name.Substring(0, User.Identity.Name.IndexOf("."));
+                <h2 style="height: 100%; width: 100%; text-align: right;">Welcome back, @name <span class="glyphicon glyphicon-user" style="color:darkgreen"></span></h2>
+            }
+            else
+            {
+                var name = User.Identity.Name.Substring(0, User.Identity.Name.IndexOf("@"));
+                <h2 style="height: 100%; width: 100%; text-align: right;">Welcome back, @name <span class="glyphicon glyphicon-user" style="color:darkgreen"></span></h2>
+            }
+        }
+
+    </div>
+
+    <div class="col-md-offset-6">
+        <h2 style="height: 100%; width: 100%; text-align: right;"><span class="glyphicon glyphicon-phone" style="color:darkgreen"></span>Mobile Friendly!</h2>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <h1> School Website <span class="glyphicon glyphicon-home" style="color:darkgreen;"></span></h1>
+            <h2>
+                Take a look at our college!
+            </h2>
+            <h3><a class="btn btn-default" style="position:relative; width:100%" href="https://www.uwrf.edu/index.cfm" target="_blank">UW - River Falls</a></h3>
+        </div>
+
+        <div class="col-md-offset-9">
+            <iframe style="margin: auto auto; display: block;" src="http://cdnres.willyweather.com/widget/loadView.html?id=52558" width="200" height="228" frameborder="0" scrolling="yes"></iframe>
+            <a style="z-index: 1;text-indent: -9999em;display: block;margin: -20px 0 0 0;position: relative" href="http://www.willyweather.com/wi/pierce-county/river-falls.html">river falls's weather</a>
+        </div>
+
+        <div class="col-md-3"></div>
+
+        <div class="col-md-6">
+            <h1>D2L <span class="glyphicon glyphicon-globe" style="color:darkgreen;"></span></h1>
+            <h2>Links directly to the D2L login</h2>
+            <h3><a class="btn btn-default" style="position:relative; width:100%" href="https://www.uwrf.edu/DOTS/Learn.cfm" target="_blank">Desire to Learn</a></h3>
+        </div>
+
+
+
+    </div>
+
+</div>
+@*
+            <div class="col-md-9" width="200px">
+                <h1></h1>
+                <span style='display:block !important; width: 200px; text-align: center; font-family: sans-serif; font-size: 12px;'>
+                    <a href='http://www.wunderground.com/cgi-bin/findweather/getForecast?query=River Falls,WI' title='Click for a Detailed Report' target="_blank">
+                        <img src='http://weathersticker.wunderground.com/weathersticker/big2_cond/language/english/US/WI/River_Falls.gif'
+                             alt='Find more about Weather in River Falls, WI' align="middle" />
+                    </a><br><a href='http://www.wunderground.com' title='Get latest Weather Forecast
+               updates' target="_blank" style='font-family: sans-serif; font-size: 12px;'></a>
+                </span>
+            </div>
+        </div>
+    </div>
+*@
+@*
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Getting started</h2>
+            <p>
+                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                enables a clean separation of concerns and gives you full control over markup
+                for enjoyable, agile development.
+            </p>
+            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Get more libraries</h2>
+            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Web Hosting</h2>
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </div>
+    </div>
+*@

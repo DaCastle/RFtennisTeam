@@ -1,0 +1,62 @@
+﻿@model IEnumerable<RFtennisTeam.Models.NoteBoard>
+
+@{
+    ViewBag.Title = "NoteBoard";
+}
+<div id="Dak-Standard">
+    <h2 id="Footer">Have a note for the team? Leave one here!</h2>
+
+    <p>
+        @Html.ActionLink("Add a Note", "Create")
+    </p>
+    <!--<div class="table-responsive">-->
+    <table class="table">
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.note)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.userName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.date)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Reverse())
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.note)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.userName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date)
+                </td>
+
+                @if (HttpContext.Current.User.Identity.Name == "dakota.castleberg18@gmail.com")
+                {
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+                }
+                else if (HttpContext.Current.User.Identity.Name == item.userName)
+                {
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+                }
+            </tr>
+        }
+
+    </table>
+    <!---</div>-->
+</div>

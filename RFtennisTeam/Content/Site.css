@@ -1,0 +1,234 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-size: cover; 
+    background-size: 100% 100%;
+    background-image: url(../../Tennis-Ball-Sports-Wallpaper.jpg);
+}
+
+@media only screen (max-width: 800px){
+    iframe {
+        text-align:center;
+        margin: 0 auto;
+        max-width: 310px;
+    }
+}
+
+@media (max-width:800px){
+    div {
+        text-align:center;
+    }
+    
+    .flip-container {
+        display:none;
+    }
+
+    #mediaTitle {
+        display:block;
+    }
+}
+
+@media (min-width:801px){
+    #mediaTitle{
+        display:none;
+    }
+}
+
+#Dak-Center {
+    color: crimson;
+    font-weight: bold;
+    background-color: white;
+    background-color: rgba(255,255,255,.8);
+    border: double thick;
+    text-align: center;
+}
+
+#Dak-Standard {
+    color: crimson;
+    font-weight: bold;
+    background-color: white;
+    background-color: rgba(255,255,255,.8);
+    border: double thick;
+    overflow: auto;
+}
+
+#Footer {
+    color: crimson;
+    font-weight: bold;
+    text-align: center;
+}
+
+#Kitty {
+    background-size: cover; 
+    background-size: 100% 100%;
+    background-image: url("../../kitty.jpg");
+    opacity: .5;
+}
+
+img {
+    border: 10px solid red;
+}
+
+h1 {
+    color:red;
+    font-family:Arial;
+    font-weight:900;
+}
+h2,h3,h4,h5,h6,p{
+    color:red;  
+    font-size: 2em;
+    word-wrap:break-word;
+}
+
+#circle {
+    height:240px;
+    width:240px;
+    border-radius: 50%;
+    background-image:url(../../Dako.jpg);
+    background-size: 240px;
+    background-repeat: no-repeat;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+#lightBackground {
+    padding:20px;
+    margin-bottom:10px;
+    width:100%;
+    position:relative;
+    background: rgb(0, 0, 0); /* Fallback for older browsers without RGBA-support */
+    background: rgba(0, 0, 0, 0.5);
+} 
+
+.glyphicon {
+    font-size: 1em;
+}
+
+#loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('http://www.owlhatworld.com/wp-content/uploads/2015/12/38.gif') 50% 50% no-repeat rgb(249,249,249);
+}
+
+.btn {
+    background-color: white;
+    color: crimson;
+    position: relative;
+    -webkit-animation-name: SquareAnimate; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 8s; /* Chrome, Safari, Opera */
+    animation-name: SquareAnimate;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes SquareAnimate {
+    0%   {background-color:black; left:0px; top:0px;}
+    25%  {background-color:mediumslateblue; left:0px; top:0px;}
+    50%  {background-color:blue; left:0px; top:0px;}
+    75%  {background-color:green; left:0px; top:0px;}
+    100% {background-color:black; left:-0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes SquareAnimate {
+    0%   {background-color:black; left:0px; top:0px;}
+    25%  {background-color:mediumslateblue; left:0px; top:0px;}
+    50%  {background-color:blue; left:0px; top:0px;}
+    75%  {background-color:green; left:0px; top:0px;}
+    100% {background-color:black; left:0px; top:0px;}
+}
+.btn:hover {
+    background-color: crimson;
+    color: white;
+    box-shadow: 0 12px 16px 0 crimson;
+    -webkit-transition-duration: .5s;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.navbar li:hover, .navbar-header:hover {
+    background-color: darkred;
+}
+
+
+
+
+
+
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 300px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 100%;
+	height: 100%;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: center;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+    overflow:auto;
+}

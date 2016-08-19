@@ -1,0 +1,60 @@
+﻿@model RFtennisTeam.Models.MatchResults
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div id="Dak-Standard">
+<h2 id="Footer">Details</h2>
+
+<div>
+    <h4 id="Footer">Match Results</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.player1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.player2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.setScores)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.setScores)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.addedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.addedBy)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+</div>

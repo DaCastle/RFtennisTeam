@@ -1,0 +1,73 @@
+﻿@model IEnumerable<RFtennisTeam.Models.MatchResults>
+
+@{
+    ViewBag.Title = "Match Results";
+}
+
+<div id="Dak-Standard">
+    <h2 id="Footer">It never hurts to keep track of matches!</h2>
+
+    <p>
+        @Html.ActionLink("Add Match Results", "Create")
+    </p>
+    <!--<div class="table-responsive">-->
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.player1)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.player2)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.setScores)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.addedBy)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.Reverse())
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.player1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.player2)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.setScores)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.addedBy)
+                    </td>
+
+                    @if (HttpContext.Current.User.Identity.Name == "dakota.castleberg18@gmail.com")
+                {
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        </td>
+                    }
+                    else if (HttpContext.Current.User.Identity.Name == item.addedBy)
+                    {
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.Id })
+                        </td>
+                    }
+                </tr>
+            }
+
+        </table>
+    <!--</div>-->
+</div>

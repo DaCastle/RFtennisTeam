@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "UWRF Tennis Club";
+}
+
+<meta name="description" content="uwrf tennis club! Information about the  uwrf tennis club, contact
+      information, learn about the club, and keep up to date with the Noteboard and Match Results page." />
+<div class="col-md-9">
+    <div class="flip-container col-md-12" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+            <div class="front">
+                <h1 style="text-align:center; color:red;font-size: 5em;font-family:Impact;text-decoration:underline">River Falls Tennis Club</h1>
+            </div>
+            <div class="back">
+                <h1>and the Table Tennis Squirtle Squad</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12" id="mediaTitle"><h1 style="text-align:center; color:red;font-size: 5em;font-family:Impact;text-decoration:underline">UWRF Tennis Club</h1></div>
+</div>
+<h1></h1>
+<div class="col-md-12">
+    @if (User.Identity.Name != "")
+    {
+        if (User.Identity.Name.IndexOf(".") < User.Identity.Name.IndexOf("@"))
+        {
+            var name = User.Identity.Name.Substring(0, User.Identity.Name.IndexOf("."));
+            <h2 style="height: 100%; width: 100%; text-align: right;">Welcome back, @name <span class="glyphicon glyphicon-user" style="color:darkgreen"></span></h2>
+        }
+        else
+        {
+            var name = User.Identity.Name.Substring(0, User.Identity.Name.IndexOf("@"));
+            <h2 style="height: 100%; width: 100%; text-align: right;">Welcome back, @name <span class="glyphicon glyphicon-user" style="color:darkgreen"></span></h2>
+        }
+    }
+
+</div>
+
+
+
+            <div class="col-md-offset-6">
+                <h2 style="height: 100%; width: 100%; text-align: right;"><span class="glyphicon glyphicon-phone" style="color:darkgreen"></span>Mobile Friendly!</h2>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    <h1> School Website <span class="glyphicon glyphicon-home" style="color:darkgreen;"></span></h1>
+                    <h2>
+                        Take a look at our college!
+                    </h2>
+                    <h3><a class="btn btn-default" style="position:relative; width:100%" href="https://www.uwrf.edu/index.cfm" target="_blank">UW - River Falls</a></h3>
+                </div>
+
+                <div class="col-md-offset-9">
+                    <iframe style="display: block;margin: auto auto" src="http://cdnres.willyweather.com/widget/loadView.html?id=52558" width="200" height="228" frameborder="0" scrolling="no"></iframe>
+                    <a style="z-index: 1;text-indent: -9999em;display: block;margin: -20px 0 0 0;position: relative" href="http://www.willyweather.com/wi/pierce-county/river-falls.html">river falls's weather</a>
+                </div>
+
+                <div class="col-md-3"></div>
+
+                <div class="col-md-6">
+                    <h1>D2L <span class="glyphicon glyphicon-globe" style="color:darkgreen;"></span></h1>
+                    <h2>Directly to the login</h2>
+                    <h3><a class="btn btn-default" style="position:relative; width:100%" href="https://www.uwrf.edu/DOTS/Learn.cfm" target="_blank"> uwrf Desire to Learn</a></h3>
+                </div>
+            </div>

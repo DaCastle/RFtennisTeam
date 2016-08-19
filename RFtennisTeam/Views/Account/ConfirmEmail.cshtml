@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Email Confirmed!";
+}
+
+<div id="Dak-Standard">
+    <h2>@ViewBag.Title</h2>
+
+    <p>Thank you for confirming your email.</p>
+    <p>You can now access the Match Results and Noteboard pages</p>
+    <p> Please @Html.ActionLink("Click here to Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</p>
+</div>
