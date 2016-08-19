@@ -60,12 +60,6 @@ namespace RFtennisTeam
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "956711004775-qfph6jm038m5qpkfksfri8k778ultskr.apps.googleusercontent.com",
-                ClientSecret = "yP1oGKLjXDfPcm32EZ8LIukq"
-                //ClientId = "1039186104067-ltt0egifek9aplu1hvdgvt0dndgd42fk.apps.googleusercontent.com",
-                //ClientSecret = "uzzgcJbRSAyxrk99fQ7UJzoR"
-                //ClientId = "956711004775-734155q5s7d6fmrab870ej4smvsju3cu.apps.googleusercontent.com",
-                //ClientSecret = "quJme4vETIC8Bzve5aJkNOS2"
 
             });
         }
