@@ -25,7 +25,6 @@ namespace RFtennisTeam
         {
             // Plug in your email service here to send an email.
             message.Subject = "UWRF Tennis Club";
-            //message.Body = "<html><body style=\"background-image:url(https://www.uwrf.edu/news/images/UWRFRedBG271.png);\">This is my message</body></html>";
             await configSendGridasync(message);
         }
 
@@ -62,9 +61,7 @@ namespace RFtennisTeam
             }
 
 
-            /* // Returning null, why?
- String apiKey = Environment.GetEnvironmentVariable("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", EnvironmentVariableTarget.User);
- dynamic sg = new SendGrid.SendGridAPIClient(apiKey);
+
 
  Email from = new Email("test@sendgrid.com");
  Email to = new Email("dakota.castleberg18@gmail.com");
